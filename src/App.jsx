@@ -1,9 +1,11 @@
 import './App.css';
+import RocketAvatar from './components/RocketAvatar';
 
 function App() {
   return (
     <div style={styles.container}>
       <h1 style={styles.heading}> 🚀 Build Your Own Satellite</h1>
+      <RocketAvatar />
       <p style={styles.paragraph}>
         Welcome, young space explorer! Today you will learn how to build your very own Satellite
       </p>
