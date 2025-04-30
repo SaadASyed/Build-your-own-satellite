@@ -3,8 +3,8 @@ import React from "react";
 const LessonSpeech = () => {
     const speakLesson = () => {
         const lessonText = `
-        Hellp young space explorers!! I'm your rocket guide!
-        TOday we will build a satellite that help us do special
+        Hello young space explorers!! I'm your rocket assistant!
+        Today we will build a satellite that help us do special
         things like send messages and monitor weather conditions
         `;
 
