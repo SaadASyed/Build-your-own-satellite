@@ -1,6 +1,7 @@
 import './App.css';
 import RocketAvatar from './components/RocketAvatar';
 import LessonSpeech from './components/LessonSpeech';
+import WebcamFeed from './components/WebcamFeed';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         Welcome, young space explorer! Today you will learn how to build your very own Satellite
       </p>
       <LessonSpeech />
+      <WebcamFeed />
       <button style={styles.button} onClick={() => alert('Lesson will start soon!')}>
         Start Lesson
       </button>
