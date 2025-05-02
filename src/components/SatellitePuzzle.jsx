@@ -152,7 +152,7 @@ const SatellitePuzzle = () => {
 
       {/* Success message */}
       {completed && (
-        <div style={{ textAlign: 'center', fontSize: '1.2rem', color: '#fffff' }}>
+        <div style={{ textAlign: 'center', fontSize: '1.2rem', color: '#ffffff' }}>
           ✅ Satellite Reassembled Successfully!
         </div>
       )}
