@@ -2,6 +2,7 @@ import './App.css';
 import RocketAvatar from './components/RocketAvatar';
 import LessonSpeech from './components/LessonSpeech';
 import WebcamFeed from './components/WebcamFeed';
+import SatelliteBuilder from './components/SatelliteBuilder';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </p>
       <LessonSpeech />
       <WebcamFeed />
+      <SatelliteBuilder />
       <button style={styles.button} onClick={() => alert('Lesson will start soon!')}>
         Start Lesson
       </button>
