@@ -3,6 +3,7 @@ import RocketAvatar from './components/RocketAvatar';
 import LessonSpeech from './components/LessonSpeech';
 import WebcamFeed from './components/WebcamFeed';
 import SatelliteBuilder from './components/SatelliteBuilder';
+import Quiz from './components/quiz';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <LessonSpeech />
       <WebcamFeed />
       <SatelliteBuilder />
+      <Quiz />
       <button style={styles.button} onClick={() => alert('Lesson will start soon!')}>
         Start Lesson
       </button>
