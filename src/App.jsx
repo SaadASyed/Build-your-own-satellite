@@ -20,9 +20,6 @@ function App() {
       <SatelliteBuilder />
       <SatellitePuzzle />
       <Quiz />
-      <button style={styles.button} onClick={() => alert('Lesson will start soon!')}>
-        Start Lesson
-      </button>
     </div>
   );
 }
@@ -36,12 +33,12 @@ const styles = {
   },
   heading: {
     fontSize: '2.5rem',
-    color: '#333'
+    color: '#ffffff'
   },
   paragraph: {
     fontSize: '1.2rem',
     marginBottom: '30px',
-    color: '#555'
+    color: '#ffffff'
   },
   button: {
     fontSize: '1.1rem',

@@ -100,8 +100,7 @@ const SatellitePuzzle = () => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <h2 style={{ textAlign: 'center' }}>🧠 Rebuild the Satellite</h2>
-
+      <h2 style={{ textAlign: 'center' , color: '#ffffff'}}>🧠 Rebuild the Satellite</h2>
       {/* Draggable tray */}
       <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
         {Object.entries(pieceMap).map(([name, image]) => (
@@ -153,7 +152,7 @@ const SatellitePuzzle = () => {
 
       {/* Success message */}
       {completed && (
-        <div style={{ textAlign: 'center', fontSize: '1.2rem', color: 'green' }}>
+        <div style={{ textAlign: 'center', fontSize: '1.2rem', color: '#fffff' }}>
           ✅ Satellite Reassembled Successfully!
         </div>
       )}

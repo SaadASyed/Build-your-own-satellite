@@ -5,7 +5,8 @@ const SatelliteBuilder = () => {
     solarPanel: false,
     antenna: false,
     thruster: false,
-    wing: false
+    wing: false,
+    mainProcessor: false
   });
 
   const handlePlacePart = (partName) => {
@@ -45,6 +46,11 @@ const SatelliteBuilder = () => {
             🪶 Wing
           </button>
         )}
+        {!placedParts.mainProcessor && (
+            <button onClick={() => handlePlacePart('mainProcessor')} style={styles.partButton}>
+            💻 Main Processor
+            </button>
+        )}
       </div>
 
       <div style={styles.satelliteFrame}>
@@ -54,6 +60,7 @@ const SatelliteBuilder = () => {
           <li>🔲 Antenna: {placedParts.antenna ? '✅ Placed' : '❌ Missing'}</li>
           <li>🔲 Mini Thruster: {placedParts.thruster ? '✅ Placed' : '❌ Missing'}</li>
           <li>🔲 Wing: {placedParts.wing ? '✅ Placed' : '❌ Missing'}</li>
+          <li>🔲 Main Processor {placedParts.mainProcessor ? '✅ Placed' : '❌ Missing'} </li>
         </ul>
       </div>
 
@@ -74,11 +81,13 @@ const styles = {
   },
   heading: {
     fontSize: '1.8rem',
-    marginBottom: '10px'
+    marginBottom: '10px',
+    color: '#ffffff'
   },
   instructions: {
     fontSize: '1.1rem',
-    marginBottom: '20px'
+    marginBottom: '20px',
+    color: '#ffffff'
   },
   partsPanel: {
     marginBottom: '30px'

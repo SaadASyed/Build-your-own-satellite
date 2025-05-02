@@ -126,11 +126,13 @@ const styles = {
   },
   title: {
     fontSize: '1.8rem',
-    marginBottom: '15px'
+    marginBottom: '15px',
+    color: '#ffffff'
   },
   question: {
     fontSize: '1.2rem',
-    marginBottom: '20px'
+    marginBottom: '20px',
+    color: '#ffffff'
   },
   optionsContainer: {
     display: 'flex',

@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+body {
+  background-image: url('/Images/Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

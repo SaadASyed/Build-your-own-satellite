@@ -34,7 +34,7 @@ const styles = {
   label: {
     fontSize: '1.1rem',
     marginBottom: '10px',
-    color: '#333',
+    color: '#ffffff',
   },
   video: {
     width: '320px',
