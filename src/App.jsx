@@ -20,6 +20,19 @@ function App() {
       <SatelliteBuilder />
       <SatellitePuzzle />
       <Quiz />
+      <footer
+        style={{
+          marginTop: '40px',
+          textAlign: 'center',
+          padding: '20px',
+          color: '#ffffff',
+          fontSize: '0.9rem',
+          fontStyle: 'italic',
+          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        }}
+      >
+        Developed by <strong>Saad Syed</strong> for the Spacey Science mission 🚀
+      </footer>
     </div>
   );
 }
