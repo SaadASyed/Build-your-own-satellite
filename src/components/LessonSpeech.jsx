@@ -5,7 +5,7 @@ const LessonSpeech = () => {
     const lessonText = `
         It may be said... that building a satellite is like putting together the ultimate space robot!
 
-        Hello young space explorers! I’m your friendly rocket guide, and today we’re going to learn how to build a satellite, piece by piece. So buckle in — let’s launch into learning!
+        Hello young space explorers! I’m your friendly rocket assistant, and today we’re going to learn how to build a satellite, piece by piece. So buckle in — let’s launch into learning!
 
         First up — the solar panels!  
         These are the large flat wings that stick out from the sides of the satellite. But they're not just decoration — they soak up the Sun’s energy and turn it into power. Think of them as the satellite’s solar batteries! Without them, the satellite would run out of energy and stop working. So solar panels are absolutely essential for keeping everything powered while it floats in space.
