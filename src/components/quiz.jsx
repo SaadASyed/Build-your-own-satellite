@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+const savedProgress = JSON.parse(localStorage.getItem('spaceyProgress'));
+
 const questions = [
   {
     question: 'What do satellites use to get power?',
@@ -45,6 +47,15 @@ const Quiz = () => {
     } else {
       setShowResult(true);
     }
+    if (nextQuestion >= questions.length) {
+        const resultData = {
+          score: isCorrect ? score + 1 : score,
+          badge: getBadge(isCorrect ? score + 1 : score),
+          completed: true
+        };
+        localStorage.setItem('spaceyProgress', JSON.stringify(resultData));
+        setShowResult(true);
+      }      
   };
 
   const resetQuiz = () => {
@@ -53,10 +64,28 @@ const Quiz = () => {
     setShowResult(false);
   };
 
+  const getFeedback = (score) => {
+    if (score === 5) return '🌟 Outstanding work, Commander!';
+    if (score >= 3) return '🚀 Great job, Space Explorer!';
+    if (score >= 1) return '🛰️ You’re learning fast!';
+    return '🔄 Let’s try again!';
+  };
+  
+  const getBadge = (score) => {
+    if (score === 5) return '🏆 Gold Badge';
+    if (score >= 3) return '🥈 Silver Badge';
+    if (score >= 1) return '🥉 Bronze Badge';
+    return '🧪 Retry Badge';
+  };  
+
   return (
     <div style={styles.container}>
       <h2 style={styles.title}>🧠 Space Quiz</h2>
-
+      {savedProgress && savedProgress.completed && (
+        <div style={styles.savedBox}>
+          🌟 Welcome back, Commander! You previously scored {savedProgress.score} and earned a {savedProgress.badge}.
+        </div>
+      )}
       {!showResult ? (
         <div>
           <p style={styles.question}>
@@ -74,6 +103,12 @@ const Quiz = () => {
         <div style={styles.resultBox}>
           <h3>🎉 Quiz Complete!</h3>
           <p>You scored {score} out of {questions.length}.</p>
+          <p style={{ fontSize: '1.1rem', marginTop: '10px' }}>
+            {getFeedback(score)}
+          </p>
+          <p style={{ fontSize: '2rem', marginTop: '10px' }}>
+            {getBadge(score)}
+          </p>
           <button style={styles.retryButton} onClick={resetQuiz}>
             🔁 Try Again
           </button>
@@ -127,7 +162,15 @@ const styles = {
     border: 'none',
     borderRadius: '6px',
     cursor: 'pointer'
-  }
+  },
+  savedBox: {
+    backgroundColor: '#eaf7ff',
+    border: '1px solid #0077cc',
+    padding: '10px',
+    borderRadius: '10px',
+    marginBottom: '15px',
+    fontSize: '1rem',
+  }  
 };
 
 export default Quiz;
